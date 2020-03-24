@@ -29,7 +29,7 @@
             <td>@x.DEPARTMENT</td>
             <td>@x.GPA</td>
             <td>@Html.ActionLink("Sil", "EgitimSil", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm(' Bu Eğitim Bilgini Silmek İstiyor Musun?')" })</td>
-            <td><a href="" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Egitim/VeriGetir/@x.ID" class="btn btn-success">Güncelle</a></td>
 
         </tr>
         }

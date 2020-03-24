@@ -21,7 +21,7 @@
             <th>@x.ID</th>
             <td>@x.SKILL</td>
             <td>@Html.ActionLink("Sil", "YetenekSil", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm(' Bu Yeteneğini Silmek İstiyor Musun?')" })</td>
-            <td><a href="" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Yetenekler/VeriGetir/@x.ID" class="btn btn-success">Güncelle</a></td>
             
         </tr>
         }

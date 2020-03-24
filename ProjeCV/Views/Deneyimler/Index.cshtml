@@ -29,7 +29,7 @@
                 <td>@x.DATE</td>
                 <td>@x.DETAILS</td>
                 <td>@Html.ActionLink("Sil", "DeneyimSil", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm(' Bu Deneyimini Silmek İstiyor Musun?')" })</td>
-                <td><a href="" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Deneyimler/VeriGetir/@x.ID" class="btn btn-success">Güncelle</a></td>
                 
             </tr>
         }

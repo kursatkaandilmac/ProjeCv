@@ -40,5 +40,20 @@ namespace ProjeCV.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult VeriGetir(int id)
+        {
+            var veriler = db.TBL_INTERESTS.Find(id);
+            return View("VeriGetir", veriler);
+        }
+
+        public ActionResult Guncelle(TBL_INTERESTS p)
+        {
+            var degerler = db.TBL_INTERESTS.Find(p.ID);
+            degerler.INTEREST = p.INTEREST;
+
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

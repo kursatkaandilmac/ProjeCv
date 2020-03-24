@@ -40,5 +40,23 @@ namespace ProjeCV.Controllers
 
             return RedirectToAction("Index");
         }
+        public ActionResult VeriGetir(int id)
+        {
+            var veriler = db.TBL_EXPERIENCE.Find(id);
+            return View("VeriGetir", veriler);
+        }
+
+        public ActionResult Guncelle(TBL_EXPERIENCE p)
+        {
+            var degerler = db.TBL_EXPERIENCE.Find(p.ID);
+            degerler.DATE = p.DATE;
+            degerler.DETAILS = p.DETAILS;
+            degerler.TITLE = p.TITLE;
+            degerler.SUBTITLE = p.SUBTITLE;
+            
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

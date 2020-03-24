@@ -1,0 +1,21 @@
+﻿@model ProjeCV.Models.Entity.TBL_AWARDS
+@{
+    ViewBag.Title = "VeriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Konferanslar", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ID)
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control", disabled = "false"  })
+        <br />
+        @Html.LabelFor(m => m.AWARD)
+        @Html.TextBoxFor(m => m.AWARD, new { @class = "form-control" })
+
+        <br />
+        <br />
+
+        <button class="btn btn-success">Konferans Güncelle</button>
+    </div>
+}

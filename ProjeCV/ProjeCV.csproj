@@ -326,6 +326,12 @@
     <Content Include="Views\Yetenekler\YeniYetenek.cshtml" />
     <Content Include="Views\Hobiler\YeniHobi.cshtml" />
     <Content Include="Views\Konferanslar\YeniKonferans.cshtml" />
+    <Content Include="Views\Hakkimda\VeriGetir.cshtml" />
+    <Content Include="Views\Deneyimler\VeriGetir.cshtml" />
+    <Content Include="Views\Egitim\VeriGetir.cshtml" />
+    <Content Include="Views\Yetenekler\VeriGetir.cshtml" />
+    <Content Include="Views\Hobiler\VeriGetir.cshtml" />
+    <Content Include="Views\Konferanslar\VeriGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
