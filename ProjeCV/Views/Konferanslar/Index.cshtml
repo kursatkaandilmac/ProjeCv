@@ -10,7 +10,7 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>ID</th>
+            <th style="display:none">ID</th>
             <th>Konferanslarım</th>
             <th>Sil</th>
             <th>Güncelle</th>
@@ -21,7 +21,7 @@
         @foreach (var x in Model)
         {
             <tr>
-                <th>@x.ID</th>
+                <th style="display:none">@x.ID</th>
                 <td>@x.AWARD</td>
                 <td>@Html.ActionLink("Sil", "KonferansSil", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm(' Bu Konferansını Silmek İstiyor Musun?')" })</td>
                 <td><a href="/Konferanslar/VeriGetir/@x.ID" class="btn btn-success">Güncelle</a></td>

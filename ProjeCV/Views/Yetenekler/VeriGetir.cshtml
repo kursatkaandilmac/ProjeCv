@@ -7,8 +7,8 @@
 @using (Html.BeginForm("Guncelle", "Yetenekler", FormMethod.Post))
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.ID)
-        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+        @Html.LabelFor(m => m.ID, new { @style = "display:none;" })
+        @Html.TextBoxFor(m => m.ID, new { @style = "display:none;" })
         <br />
         @Html.LabelFor(m => m.SKILL)
         @Html.TextBoxFor(m => m.SKILL, new { @class = "form-control" })

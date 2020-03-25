@@ -7,7 +7,7 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>ID</th>
+            <th style="display:none">ID</th>
             <th>BAŞLIK</th>
             <th>ALT BAŞLIK</th>
             <th>BÖLÜM</th>
@@ -23,7 +23,7 @@
         @foreach (var x in Model.Deger3)
         {
         <tr>
-            <th>@x.ID</th>
+            <th style="display:none">@x.ID</th>
             <td>@x.TITLE</td>
             <td>@x.SUBTITLE</td>
             <td>@x.DEPARTMENT</td>
