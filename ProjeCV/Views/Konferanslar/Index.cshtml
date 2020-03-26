@@ -1,19 +1,34 @@
 ﻿@using ProjeCV.Models.Entity
-@using PagedList
-@using PagedList.Mvc
-@model PagedList.IPagedList<TBL_AWARDS>
+@model List<TBL_AWARDS>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+@using (Html.BeginForm("Index", "Konferanslar", FormMethod.Get))
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    <p align="center">
+                        Aranacak Değer :  @Html.TextBox("p")
+                        <input class="btn btn-warning" type="submit" value="Ara" />
+                    </p>
+                </th>
+            </tr>
+        </thead>
+    </table>
+
+}
+
 <table class="table table-bordered">
     <thead>
-        <tr>
+        <tr align="center">
             <th style="display:none">ID</th>
             <th>Konferanslarım</th>
-            <th>Sil</th>
-            <th>Güncelle</th>
+            <th><p align="center">Sil</p></th>
+            <th><p align="center">Güncelle</p></th>
         </tr>
     </thead>
     <tbody>
@@ -23,15 +38,13 @@
             <tr>
                 <th style="display:none">@x.ID</th>
                 <td>@x.AWARD</td>
-                <td>@Html.ActionLink("Sil", "KonferansSil", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm(' Bu Konferansını Silmek İstiyor Musun?')" })</td>
-                <td><a href="/Konferanslar/VeriGetir/@x.ID" class="btn btn-success">Güncelle</a></td>
+                <td align="center">@Html.ActionLink("Sil", "KonferansSil", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm(' Bu Konferansını Silmek İstiyor Musun?')" })</td>
+                <td align="center"><a href="/Konferanslar/VeriGetir/@x.ID" class="btn btn-success">Güncelle</a></td>
             </tr>
         }
 
     </tbody>
 
 </table>
-
-@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
 
 <a href="/Konferanslar/YeniKonferans/" class="btn btn-info">Yeni Konferans Ekle</a>

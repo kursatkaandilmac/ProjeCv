@@ -143,6 +143,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DeneyimlerController.cs" />
     <Compile Include="Controllers\EgitimController.cs" />
+    <Compile Include="Controllers\GirisController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
     <Compile Include="Controllers\HobilerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -209,6 +210,11 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="web\css\font-awesome.css" />
+    <Content Include="web\css\style.css" />
+    <Content Include="web\images\1.jpg" />
+    <Content Include="web\index.html" />
+    <Content Include="web\w3layouts-License.txt" />
     <EntityDeploy Include="Models\Entity\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -341,6 +347,12 @@
     <Content Include="Views\Yetenekler\VeriGetir.cshtml" />
     <Content Include="Views\Hobiler\VeriGetir.cshtml" />
     <Content Include="Views\Konferanslar\VeriGetir.cshtml" />
+    <Content Include="web\fonts\fontawesome-webfont.eot" />
+    <Content Include="web\fonts\fontawesome-webfont.ttf" />
+    <Content Include="web\fonts\fontawesome-webfont.woff" />
+    <Content Include="web\fonts\fontawesome-webfont.woff2" />
+    <Content Include="web\fonts\FontAwesome.otf" />
+    <Content Include="Views\Giris\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

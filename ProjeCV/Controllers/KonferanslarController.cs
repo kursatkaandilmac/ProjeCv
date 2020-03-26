@@ -5,8 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using ProjeCV.Models.Entity;
 using ProjeCV.Models.Sinif;
-using PagedList;
-using PagedList.Mvc;
 
 namespace ProjeCV.Controllers
 {
@@ -14,11 +12,15 @@ namespace ProjeCV.Controllers
     {
         DbMvcCvEntities db = new DbMvcCvEntities();
         // GET: Konferanslar
-        public ActionResult Index(int sayfa = 1)
+        public ActionResult Index(string p)
         {
             //Class1 cs = new Class1();
-            var degerler = db.TBL_AWARDS.ToList().ToPagedList(sayfa,5);
-            return View(degerler);
+            var degerler = from d in db.TBL_AWARDS select d;
+            if (!string.IsNullOrEmpty(p))
+            {
+                degerler = degerler.Where(m => m.AWARD.Contains(p));
+            }
+            return View(degerler.ToList());
         }
         [HttpGet]
         public ActionResult YeniKonferans()
